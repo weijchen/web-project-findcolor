@@ -1,3 +1,0 @@
-# Websites projects
-
-TBD
