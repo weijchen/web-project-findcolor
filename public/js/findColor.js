@@ -26,7 +26,7 @@ function init() {
 
 function setupModeButtons() {
   for (var i = 0; i < modeButton.length; i++) {
-    modeButton[i].addEventListener("click", function() {
+    modeButton[i].addEventListener("click", function () {
       modeButton[0].classList.remove("selected");
       modeButton[1].classList.remove("selected");
       modeButton[2].classList.remove("selected");
@@ -53,7 +53,7 @@ function setupSquaresColor() {
   }
 }
 
-resetButton.addEventListener("click", function() {
+resetButton.addEventListener("click", function () {
   reset();
   hasAdd = false;
 })
@@ -61,12 +61,12 @@ resetButton.addEventListener("click", function() {
 function setupSquares() {
   for (var i = 0; i < squares.length; i++) {
     // add click listeners to squares
-    squares[i].addEventListener("click", function() {
+    squares[i].addEventListener("click", function () {
       // grab color of clicked square
       var clickedColor = this.style.backgroundColor;
       if (clickedColor === targetColor) {
         messageDisplay.textContent = "A Ha! You found it!";
-        resetButton.textContent = "Continue";
+        resetButton.textContent = "Restart";
         changeColors(clickedColor);
         h1.style.backgroundColor = clickedColor;
         if (!hasAdd) {
@@ -86,6 +86,7 @@ function setupSquares() {
 }
 
 function reset() {
+  resetButton.textContent = "New Game";
   generateColor();
   colors = generateRandomColors();
   for (var i = 0; i < colors.length; i++) {
@@ -95,7 +96,7 @@ function reset() {
   setupSquares();
 }
 
-function changeColors(color) {
+function changeColors() {
   for (var i = 0; i < squares.length; i++) {
     squares[i].style.backgroundColor = targetColor;
   }

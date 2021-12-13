@@ -1,7 +1,7 @@
 body {
   margin: 0;
   background: #232323;
-  font-family: "Montserrat", "Avenir";
+  font-family: 'Montserrat', 'Avenir';
 }
 
 h1 {
@@ -71,5 +71,5 @@ button:hover {
 
 .selected {
   color: white;
-  background: black; 
+  background: black;
 }
